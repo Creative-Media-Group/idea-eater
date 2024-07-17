@@ -1,6 +1,6 @@
 [tool.briefcase]
 project_name = "Idea Eater"
-bundle = "com.example.idea_eater"
+bundle = "com.example"
 version = "0.0.1"
 url = "https://github.com/mattcen/idea_eater"
 license.file = "LICENSE"
