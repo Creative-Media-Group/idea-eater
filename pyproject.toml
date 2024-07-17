@@ -3,7 +3,7 @@ project_name = "Idea Eater"
 bundle = "com.example.idea_eater"
 version = "0.0.1"
 url = "https://github.com/mattcen/idea_eater"
-license = "BSD license"
+license.file = "LICENSE"
 author = 'Matt Cengia, Lilly Ryan'
 author_email = "mattcen@mattcen.com, lilly@attacus.net"
 
