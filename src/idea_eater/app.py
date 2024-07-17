@@ -31,9 +31,14 @@ class IdeaEater(toga.App):
         idea_box = toga.Box(style=Pack(direction=ROW, padding=5))
         idea_box.add(idea_label)
         idea_box.add(self.idea_input)
-        button = toga.Button(tr(csv_file=self.file, target_key="NOM", langcode=self.lang), on_press=self.eat_idea, style=Pack(padding=5))
+        button = toga.Button(
+            tr(csv_file=self.file, target_key="NOM", langcode=self.lang),
+            on_press=self.eat_idea,
+            style=Pack(padding=5),
+        )
         self.last_idea_label = toga.Label(
-            tr(csv_file=self.file, target_key="LASTIDEAEATENNONE", langcode=self.lang), style=Pack(padding=(0, 5))
+            tr(csv_file=self.file, target_key="LASTIDEAEATENNONE", langcode=self.lang),
+            style=Pack(padding=(0, 5)),
         )
         monster_image = toga.images.Image("resources/idea_eater.png")
         monster_image_view = toga.ImageView(id="monster_image", image=monster_image)
@@ -48,7 +53,10 @@ class IdeaEater(toga.App):
     def eat_idea(self, widget):
         with open(os.path.join(pathlib.Path.home(), "ideas.txt"), "a") as f:
             f.write(self.idea_input.value + "\n")
-        self.last_idea_label.text = tr(csv_file=self.file, target_key="LASTIDEAEATENNONE", langcode=self.lang) + self.idea_input.value
+        self.last_idea_label.text = (
+            tr(csv_file=self.file, target_key="LASTIDEAEATENNONE", langcode=self.lang)
+            + self.idea_input.value
+        )
         self.idea_input.clear()
         self.idea_input.focus()
 
