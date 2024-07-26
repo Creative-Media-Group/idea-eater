@@ -7,7 +7,7 @@ license.file = "LICENSE"
 author = 'Matt Cengia, Lilly Ryan'
 author_email = "mattcen@mattcen.com, lilly@attacus.net"
 
-[tool.briefcase.app.idea_eater]
+[tool.briefcase.app.idea-eater]
 formal_name = "Idea Eater"
 description = "Takes ideas and eats them"
 long_description = """More details about the app should go here.
@@ -19,14 +19,14 @@ test_sources = ["tests"]
 requires = ["mylocale"]
 test_requires = ["pytest"]
 
-[tool.briefcase.app.idea_eater.macOS]
+[tool.briefcase.app.idea-eater.macOS]
 universal_build = true
 requires = ["toga-cocoa~=0.4.5", "std-nslog~=1.0.0", "playsound"]
 
-[tool.briefcase.app.idea_eater.linux]
+[tool.briefcase.app.idea-eater.linux]
 requires = ["toga-gtk~=0.4.5", "playsound"]
 
-[tool.briefcase.app.idea_eater.linux.system.debian]
+[tool.briefcase.app.idea-eater.linux.system.debian]
 system_requires = [
     # Needed to compile pycairo wheel
     "libcairo2-dev",
@@ -44,7 +44,7 @@ system_runtime_requires = [
     # "gir1.2-webkit2-4.0",
 ]
 
-[tool.briefcase.app.idea_eater.linux.system.rhel]
+[tool.briefcase.app.idea-eater.linux.system.rhel]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo-gobject-devel",
@@ -63,7 +63,7 @@ system_runtime_requires = [
     # "webkit2gtk3",
 ]
 
-[tool.briefcase.app.idea_eater.linux.system.suse]
+[tool.briefcase.app.idea-eater.linux.system.suse]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo-devel",
@@ -84,7 +84,7 @@ system_runtime_requires = [
     # "typelib(WebKit2)",
 ]
 
-[tool.briefcase.app.idea_eater.linux.system.arch]
+[tool.briefcase.app.idea-eater.linux.system.arch]
 system_requires = [
     # Needed to compile pycairo wheel
     "cairo",
@@ -111,7 +111,7 @@ system_runtime_requires = [
     # "webkit2gtk",
 ]
 
-[tool.briefcase.app.idea_eater.linux.appimage]
+[tool.briefcase.app.idea-eater.linux.appimage]
 manylinux = "manylinux2014"
 
 system_requires = [
@@ -129,19 +129,19 @@ system_requires = [
 ]
 linuxdeploy_plugins = ["DEPLOY_GTK_VERSION=3 gtk"]
 
-[tool.briefcase.app.idea_eater.linux.flatpak]
+[tool.briefcase.app.idea-eater.linux.flatpak]
 flatpak_runtime = "org.gnome.Platform"
 flatpak_runtime_version = "44"
 flatpak_sdk = "org.gnome.Sdk"
 
-[tool.briefcase.app.idea_eater.windows]
+[tool.briefcase.app.idea-eater.windows]
 requires = ["toga-winforms~=0.4.5", "playsound"]
 
 # Mobile deployments
-[tool.briefcase.app.idea_eater.iOS]
+[tool.briefcase.app.idea-eater.iOS]
 requires = ["toga-iOS~=0.4.5", "std-nslog~=1.0.0"]
 
-[tool.briefcase.app.idea_eater.android]
+[tool.briefcase.app.idea-eater.android]
 requires = ["toga-android~=0.4.5"]
 
 build_gradle_dependencies = [
@@ -151,6 +151,6 @@ build_gradle_dependencies = [
 ]
 
 # Web deployments
-[tool.briefcase.app.idea_eater.web]
+[tool.briefcase.app.idea-eater.web]
 requires = ["toga-web~=0.4.5"]
 style_framework = "Shoelace v2.3"
