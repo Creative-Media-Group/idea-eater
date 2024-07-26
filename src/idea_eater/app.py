@@ -53,11 +53,17 @@ class IdeaEater(toga.App):
     def eat_idea(self, widget):
         with open(os.path.join(pathlib.Path.home(), "ideas.txt"), "a") as f:
             f.write(self.idea_input.value + "\n")
-        self.last_idea_label.text = (
-            tr(csv_file=self.file, target_key="LASTIDEAEATENNONE", langcode=self.lang)
-            + self.idea_input.value
-        )
-        self.idea_input.clear()
+        if self.idea_input.value:
+            self.last_idea_label.text = (
+                tr(csv_file=self.file, target_key="LASTIDEAEATEN", langcode=self.lang)
+                + self.idea_input.value
+            )
+        else:
+            self.last_idea_label.text = (
+                tr(csv_file=self.file, target_key="LASTIDEAEATENNONE", langcode=self.lang)
+                + self.idea_input.value
+            )
+        # self.idea_input.clear()
         self.idea_input.focus()
 
 
